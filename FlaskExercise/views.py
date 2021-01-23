@@ -1,9 +1,10 @@
 from flask import render_template, redirect, request
-from FlaskExercise import app, db
+from FlaskExercise import app
 from FlaskExercise.forms import AnimalForm
 import FlaskExercise.models as models
 
-imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.net/' + app.config['BLOB_CONTAINER']  + '/'
+imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.net/' +  \
+                 app.config['BLOB_CONTAINER']  + '/'
 
 
 @app.route('/')
