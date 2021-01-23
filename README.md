@@ -48,7 +48,7 @@ export SQL_DATABASE=blablabla_db
 export SQL_USER_NAME=blablabla_username
 export SQL_PASSWORD=blablabla-password
 
-export FLASK_APP=FlaskExercise/__init__.py
+export FLASK_APP=application.py
 
 
 export BLOB_ACCOUNT=blablabla
@@ -67,7 +67,7 @@ python3 -m venv env
 python -m venv env
 ````
 
-Activate the environment by runni`ng 
+Activate the environment by running 
 
 `source env/bin/activate` # (Linux/macOS) 
 
@@ -78,15 +78,18 @@ or `env\scripts\activate` # (Windows).
 `pip install -r requirements.txt`
 
 
-### Run Flask app
+### Run Flask app Locally
 
-Set an environment variable for `FLASK_APP`.
+launch the program using
  
-* On Linux and macOS, use `export set FLASK_APP=webapp`
-* on Windows use `set FLASK_APP=webapp`.
+`python application.py`
 
-launch the program using`
+
+# Deploying Application to Azure Web Services
+
+After creating an Azure App Service by pointing out your Github or Azure Repos, configure the
+ above environment variables by using the **configuration** settings.
  
-* python3 -m flask run` (Linux/macOS) `
-* or `python -m flask run` (Windows)
-
+<br><img src="images/settings.png"/>
+ 
+ 
